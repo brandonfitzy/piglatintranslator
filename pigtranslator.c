@@ -29,11 +29,12 @@ main(){
 			newword[j]=word[j+s];
 		} else {
 			strcat(newword, firstchars);
-/*			strcat(newword, 'a');  <---this line causes it to not output, not sure why? */
+			newword[strlen(word)]='a';
 
 		}
 	}
 	printf("%s \n", newword);
 	
 return 0;
+
 }
