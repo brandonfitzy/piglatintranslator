@@ -5,7 +5,7 @@
 
 main(){
 	char word[]="Brandon";
-/*	printf("What is the word you would like to translate? \n");
+/*	printf("What is the word you would like to translate? \n");  <----the goal is to submitt your own words (latter sentences)
 	scanf("%s", word); */
 	int i;
 	int s=0;
@@ -18,8 +18,8 @@ main(){
 	}
 	char firstchars[s];
 	int k;
-	for (k=0;k<=s;k++){
-	    firstchars=word[k];
+	for (k=0;k<s;k++){
+	    firstchars[k]=word[k];
 	}
 	int lastindex=strlen(word)-1;
 	char newword[strlen(word)];
@@ -29,10 +29,11 @@ main(){
 			newword[j]=word[j+s];
 		} else {
 			strcat(newword, firstchars);
-			strcat(newword, 'a');
+/*			strcat(newword, 'a');  <---this line causes it to not output, not sure why? */
+
 		}
 	}
-	printf("%s",newword);
+	printf("%s \n", newword);
 	
-	return 0;
+return 0;
 }
